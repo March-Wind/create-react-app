@@ -1,0 +1,25 @@
+{
+  "name": "luban",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "argv": "0.0.2",
+    "listr2": "^5.0.5",
+    "rollup": "^2.79.1",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/argv": "0.0.5",
+    "@types/node": "^18.7.23"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run":"TS_NODE_PROJECT=./tsconfig.json  node --inspect-brk  --loader ts-node/esm ./src/index.ts`"
+  },
+  "author": "",
+  "license": "ISC"
+}
