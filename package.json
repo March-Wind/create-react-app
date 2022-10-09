@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run":"TS_NODE_PROJECT=./tsconfig.json  node --inspect-brk  --loader ts-node/esm ./src/index.ts`"
+    "create": "TS_NODE_PROJECT=./tsconfig.json  node --inspect-brk  --loader ts-node/esm ./src/index.ts lunban1"
   },
   "author": "",
   "license": "ISC"
