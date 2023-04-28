@@ -16,8 +16,8 @@
     "author": "",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/March-Wind/create-react-app.git"
+        "type": "git",
+        "url": "https://github.com/March-Wind/create-react-app.git"
     },
     "devDependencies": {
         "@babel/core": "^7.20.5",
@@ -44,7 +44,7 @@
         "markdown-eslint-parser": "^1.2.1",
         "prettier": "^2.8.7",
         "stylelint-config-prettier": "^9.0.5",
-        "stylelint-prettier": "^3.0.0",
+        "stylelint-prettier": "^2.0.0",
         "ts-jest": "^29.0.5",
         "ts-node": "^10.9.1",
         "tsc-alias": "^1.8.2",
@@ -69,6 +69,7 @@
     },
     "dependencies": {
         "execa": "^7.1.1",
-        "listr2": "^5.0.8"
+        "listr2": "^5.0.8",
+        "stylelint": "^14.3.0"
     }
 }
