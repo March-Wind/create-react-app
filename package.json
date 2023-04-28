@@ -1,8 +1,9 @@
 {
     "name": "@marchyang/create-react-app",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
-    "main": "./dist/index.js",
+    "main": "./dist/main.cjs",
+    "bin": "./dist/main.cjs",
     "scripts": {
         "dev": "node --loader ts-node/esm ./src/index.ts",
         "dev2": "ts-node ./src/index.ts",
@@ -13,7 +14,11 @@
         "test": "jest --passWithNoTests"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/March-Wind/create-react-app.git"
+    },
     "devDependencies": {
         "@babel/core": "^7.20.5",
         "@babel/plugin-proposal-class-properties": "^7.18.6",
