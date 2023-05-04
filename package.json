@@ -13,7 +13,7 @@
         "eslint": "eslint ./src --fix",
         "lint-staged": "lint-staged",
         "prepublishOnly": "npm run pushCode && npm version patch && npm run build:prod",
-        "pushCode": "git add . && git commit -m \"feat: update package version\" && git push origin master",
+        "pushCode": "git add . && git commit -m 'feat: $TAG_NAME' && git push origin master",
         "postpublish": "git push origin master"
     },
     "author": "",
