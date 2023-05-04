@@ -11,7 +11,8 @@
         "build:js": "npm run clean:lib && tsc && tsc-alias",
         "build:prod": "webpack && cp -rf ./src/template ./dist",
         "eslint": "eslint ./src --fix",
-        "prepublish": "npm run build:prod"
+        "prepublishOnly": "npm run build:prod && npm version patch",
+        "postpublish": "git add . && git commit -m 'update package version' && git push origin master"
     },
     "author": "",
     "license": "MIT",
