@@ -1,6 +1,6 @@
 {
     "name": "@marchyang/create-react-app",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "description": "",
     "main": "./dist/main.cjs",
     "bin": "./dist/main.cjs",
