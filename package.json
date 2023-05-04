@@ -12,7 +12,7 @@
         "build:prod": "webpack && cp -rf ./src/template ./dist",
         "eslint": "eslint ./src --fix",
         "prepublishOnly": "npm run build:prod && npm version patch",
-        "postpublish": "git add . && git commit -m 'update package version' && git push origin master"
+        "postpublish": "git add . && git commit -m 'update package version' --no-verify && git push origin master"
     },
     "author": "",
     "license": "MIT",
