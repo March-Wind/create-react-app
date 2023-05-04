@@ -62,6 +62,12 @@ const tasks = new Listr<Ctx>([
     },
   },
   {
+    title: '安装多功能打包工具',
+    task() {
+      execaSync('npm', ['i', '-D', '@marchyang/pack']);
+    },
+  },
+  {
     title: 'Setup command',
     task() {
       const packagePath = path.resolve(process.cwd(), './package.json');
@@ -73,17 +79,24 @@ const tasks = new Listr<Ctx>([
         throw new Error('package.json 解析错误！');
       }
       configObj.scripts = {
-        dev: 'node ./node_modules/h5-pack/index.mjs --mode=dev:web --config=./h5-pack.dev.js',
+        'dev:web': 'pack2 --mode=dev:web',
+        'dev:node': 'pack2 --mode=dev:node',
+        'build:spa': 'pack2 --mode=build:spa',
+        eslint: 'eslint ./src --fix',
       };
-      // configObj.main = "./dist/index.js";
       configObj.type = 'module';
-      // configObj.files = [
-      //   "dist/*",
-      //   "*.md",
-      //   "package.json"
-      // ]
       fs.writeFileSync(packagePath, JSON.stringify(configObj, null, 4), { encoding: 'utf-8' });
     },
+  },
+  {
+    title: 'add eslint and jest',
+    task: (ctx, task) => {
+      execaSync('npx', ['@marchyang/project-helper'], {
+        // stdio: 'inherit',
+        // shell: true,
+      });
+    },
+    // options: { persistentOutput: true }
   },
 ]);
 
