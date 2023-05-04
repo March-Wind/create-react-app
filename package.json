@@ -13,7 +13,7 @@
         "eslint": "eslint ./src --fix",
         "lint-staged": "lint-staged",
         "prepublishOnly": "npm version patch && npm run build:prod",
-        "postpublish": "git add . && git commit -m \"update package version\" --no-verify && git push origin master"
+        "1": "git add . && git commit -m \"update package version\" --no-verify && git push origin master"
     },
     "author": "",
     "license": "MIT",
