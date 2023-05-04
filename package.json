@@ -10,11 +10,7 @@
         "dev:debug": " node --inspect-brk  --loader ts-node/esm ./src/index.ts",
         "build:js": "npm run clean:lib && tsc && tsc-alias",
         "build:prod": "webpack && cp -rf ./src/template ./dist",
-        "eslint": "eslint ./src --fix",
-        "lint-staged": "lint-staged",
-        "prepublishOnly": "npm run pushCode --TAG_NAME=$TAG_NAME && npm version patch && npm run build:prod",
-        "pushCode": "git add . && git commit -m 'feat: $TAG_NAME' && git push origin master",
-        "postpublish": "git push origin master"
+        "eslint": "eslint ./src --fix"
     },
     "author": "",
     "license": "MIT",
