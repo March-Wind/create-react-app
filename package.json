@@ -1,6 +1,6 @@
 {
     "name": "@marchyang/create-react-app",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "",
     "main": "./dist/main.cjs",
     "bin": "./dist/main.cjs",
@@ -11,7 +11,7 @@
         "build:js": "npm run clean:lib && tsc && tsc-alias",
         "build:prod": "webpack && cp -rf ./src/template ./dist",
         "eslint": "eslint ./src --fix",
-        "test": "jest --passWithNoTests"
+        "prepublish": "npm run build:prod"
     },
     "author": "",
     "license": "MIT",
