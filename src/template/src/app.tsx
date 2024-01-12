@@ -6,11 +6,10 @@ import { Provider } from 'react-redux';
 import store from './store';
 // import App from './page/home/index';
 
-
 ReactDOM.render(
   <Provider store={store}>
     {/* <Routes /> */}
     <RouterProvider router={router} />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
